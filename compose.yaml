@@ -1,0 +1,11 @@
+services:
+  app:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=local
