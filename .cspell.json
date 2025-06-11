@@ -1,0 +1,18 @@
+{
+  "language": "en",
+  "words": [
+    "devcontainer",
+  ],
+  "ignoreWords": [
+  ],
+  "ignorePaths": [
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "doc/*",
+    "dist/*",
+    "coverage/*",
+    "devcontainer.json"
+  ]
+}
