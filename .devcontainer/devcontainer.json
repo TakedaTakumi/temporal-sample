@@ -40,6 +40,9 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "[go]": {
+          "editor.defaultFormatter": "golang.go"
+        }
       },
       "extensions": [
         "ms-azuretools.vscode-docker",
@@ -56,7 +59,8 @@
         "vitest.explorer",
         "ryanluker.vscode-coverage-gutters",
         "github.vscode-github-actions",
-        "kisstkondoros.vscode-codemetrics"
+        "kisstkondoros.vscode-codemetrics",
+        "golang.go"
       ]
     }
   }

@@ -4,6 +4,7 @@
     "devcontainer",
   ],
   "ignoreWords": [
+    "retryable"
   ],
   "ignorePaths": [
     "vscode-extension",
@@ -13,6 +14,7 @@
     "doc/*",
     "dist/*",
     "coverage/*",
-    "devcontainer.json"
+    "devcontainer.json",
+    "go.mod"
   ]
 }
