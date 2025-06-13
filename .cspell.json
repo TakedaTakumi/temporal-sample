@@ -15,6 +15,7 @@
     "dist/*",
     "coverage/*",
     "devcontainer.json",
-    "go.mod"
+    "go.mod",
+    "go.sum"
   ]
 }
