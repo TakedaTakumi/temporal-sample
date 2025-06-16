@@ -4,7 +4,10 @@
     "devcontainer",
   ],
   "ignoreWords": [
-    "retryable"
+    "retryable",
+    "stretchr",
+    "geolocation",
+    "iplocate"
   ],
   "ignorePaths": [
     "vscode-extension",
