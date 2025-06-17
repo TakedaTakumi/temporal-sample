@@ -6,7 +6,7 @@ import (
 
 		"go.temporal.io/sdk/client"
 
-		"temporal-sample/app"
+		"money-transfer/app"
 )
 
 func main() {

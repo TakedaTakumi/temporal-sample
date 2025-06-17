@@ -1,4 +1,4 @@
-module temporal-sample/app
+module money-transfer/app
 
 go 1.24.4
 
