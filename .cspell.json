@@ -8,7 +8,10 @@
     "stretchr",
     "geolocation",
     "iplocate",
-    "pborman"
+    "pborman",
+    "temporalio",
+    "searchattributes",
+    "typedsearchattributes"
   ],
   "ignorePaths": [
     "vscode-extension",
