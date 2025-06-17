@@ -7,7 +7,8 @@
     "retryable",
     "stretchr",
     "geolocation",
-    "iplocate"
+    "iplocate",
+    "pborman"
   ],
   "ignorePaths": [
     "vscode-extension",
