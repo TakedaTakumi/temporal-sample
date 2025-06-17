@@ -10,9 +10,9 @@ import (
 )
 
 // SampleScheduleWorkflow は指定されたスケジュールで実行されます
-func SampleScheduleWorkflow(ctx workflow.Context) error {
+func SampleScheduleWorkflow(ctx workflow.Context, input string) error {
 
-	workflow.GetLogger(ctx).Info("スケジュールワークフローが開始されました。", "StartTime", workflow.Now(ctx))
+	workflow.GetLogger(ctx).Info("スケジュールワークフローが開始されました。", "StartTime", workflow.Now(ctx), "Input", input)
 
 	ao := workflow.ActivityOptions{
 		StartToCloseTimeout: 10 * time.Second,

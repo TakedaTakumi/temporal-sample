@@ -8,8 +8,10 @@ import (
 	"schedule-sample/schedule"
 
 	"github.com/pborman/uuid"
+	"go.temporal.io/api/common/v1"
 	"go.temporal.io/api/enums/v1"
 	"go.temporal.io/sdk/client"
+	"go.temporal.io/sdk/converter"
 )
 
 func main() {
@@ -32,6 +34,7 @@ func main() {
 		Action: &client.ScheduleWorkflowAction{
 			ID:        workflowID,
 			Workflow:  schedule.SampleScheduleWorkflow,
+			Args:      []interface{}{"Input Args"}, // workflowの引数
 			TaskQueue: "schedule",
 		},
 	})
@@ -111,6 +114,19 @@ func main() {
 		}
 		if description.Schedule.State.RemainingActions != 0 {
 			log.Println("スケジュールには残りのアクションがあります", "ScheduleID", scheduleHandle.GetID(), "RemainingActions", description.Schedule.State.RemainingActions)
+
+			// workflowの引数を取得する
+			if action, ok := description.Schedule.Action.(*client.ScheduleWorkflowAction); ok {
+				if payload, ok := action.Args[0].(*common.Payload); ok {
+					var inputString string
+					if err := converter.GetDefaultDataConverter().FromPayload(payload, &inputString); err != nil {
+						log.Fatalln("Failed to convert payload", err)
+					}
+
+					log.Println("Input:", inputString)
+				}
+			}
+
 			time.Sleep(5 * time.Second)
 		} else {
 			break
